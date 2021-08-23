@@ -58,16 +58,56 @@
 		14D40BA626D2D518008C6047 /* ToDoAlamofire */ = {
 			isa = PBXGroup;
 			children = (
+				14E6460B26D3CB3C008F8111 /* ToDoModule */,
+				14E6460726D3CA91008F8111 /* App */,
+			);
+			path = ToDoAlamofire;
+			sourceTree = "<group>";
+		};
+		14E6460726D3CA91008F8111 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				14E6460A26D3CAD9008F8111 /* Storyboard */,
+				14E6460926D3CAB0008F8111 /* Resources */,
+				14E6460826D3CA97008F8111 /* App Delegates */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		14E6460826D3CA97008F8111 /* App Delegates */ = {
+			isa = PBXGroup;
+			children = (
 				14D40BA726D2D518008C6047 /* AppDelegate.swift */,
 				14D40BA926D2D518008C6047 /* SceneDelegate.swift */,
+			);
+			path = "App Delegates";
+			sourceTree = "<group>";
+		};
+		14E6460926D3CAB0008F8111 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14D40BB526D2D523008C6047 /* Info.plist */,
+				14D40BB026D2D523008C6047 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		14E6460A26D3CAD9008F8111 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				14D40BB226D2D523008C6047 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		14E6460B26D3CB3C008F8111 /* ToDoModule */ = {
+			isa = PBXGroup;
+			children = (
 				14D40BAB26D2D518008C6047 /* ToDoViewController.swift */,
 				14D46D2426D392C7001B7D8B /* ToDoTableViewCell.swift */,
 				14D40BAD26D2D518008C6047 /* Main.storyboard */,
-				14D40BB026D2D523008C6047 /* Assets.xcassets */,
-				14D40BB226D2D523008C6047 /* LaunchScreen.storyboard */,
-				14D40BB526D2D523008C6047 /* Info.plist */,
 			);
-			path = ToDoAlamofire;
+			path = ToDoModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +332,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68FXT4UH73;
-				INFOPLIST_FILE = ToDoAlamofire/Info.plist;
+				INFOPLIST_FILE = ToDoAlamofire/App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +351,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 68FXT4UH73;
-				INFOPLIST_FILE = ToDoAlamofire/Info.plist;
+				INFOPLIST_FILE = ToDoAlamofire/App/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
