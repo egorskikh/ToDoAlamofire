@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct ToDos: Codable {
-    let items: [Todo] 
+struct ToDos: Decodable {
+    let items: [ToDo] 
 }
 
-struct ToDo: Codable {
+struct ToDo: Decodable {
     let item: String
     let priority: Int
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ToDoViewController: UIViewController {
 
@@ -17,6 +18,7 @@ class ToDoViewController: UIViewController {
         super.viewDidLoad()
         configureView()
         configureNavigationController()
+        testAlamofire()
     }
 
     //  MARK: - Private Method
@@ -44,7 +46,7 @@ extension ToDoViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tasksTableView.dequeueReusableCell(withIdentifier: ToDoTableViewCell.identifier, for: indexPath)
-        as! ToDoTableViewCell
+            as! ToDoTableViewCell
         cell.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.7249955512, blue: 0.7472946008, alpha: 1)
         return cell
     }
@@ -55,7 +57,7 @@ extension ToDoViewController: UITableViewDataSource {
 extension ToDoViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-           return 109
-       }
+        return 109
+    }
 
 }
