@@ -27,28 +27,28 @@
                                             <rect key="frame" x="0.0" y="0.0" width="390" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qU-zr-HrS">
-                                                    <rect key="frame" x="314.66666666666669" y="0.0" width="75.333333333333314" height="128"/>
-                                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
-                                                </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmX-If-tGp">
-                                                    <rect key="frame" x="0.0" y="0.0" width="314.66666666666669" height="109"/>
-                                                    <string key="text">Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label Label  </string>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EmX-If-tGp">
+                                                    <rect key="frame" x="20" y="11" width="279" height="87"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qU-zr-HrS">
+                                                    <rect key="frame" x="314.66666666666669" y="0.0" width="75.333333333333314" height="109"/>
+                                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="75.333333333333314" id="xCR-lt-eSl"/>
+                                                    </constraints>
+                                                </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="5qU-zr-HrS" firstAttribute="top" secondItem="h0R-p0-nd3" secondAttribute="top" id="Dpl-fG-PeA"/>
-                                                <constraint firstAttribute="width" secondItem="5qU-zr-HrS" secondAttribute="width" multiplier="5.175" id="Hw1-NI-MAc"/>
-                                                <constraint firstAttribute="bottom" secondItem="5qU-zr-HrS" secondAttribute="bottom" id="K3n-hF-aFe"/>
-                                                <constraint firstAttribute="bottom" secondItem="EmX-If-tGp" secondAttribute="bottom" id="RtY-Lx-GBw"/>
-                                                <constraint firstAttribute="height" secondItem="5qU-zr-HrS" secondAttribute="height" multiplier="0.851562" id="SaA-B5-tlS"/>
-                                                <constraint firstItem="5qU-zr-HrS" firstAttribute="leading" secondItem="EmX-If-tGp" secondAttribute="trailing" id="gXX-RV-viQ"/>
-                                                <constraint firstItem="EmX-If-tGp" firstAttribute="top" secondItem="h0R-p0-nd3" secondAttribute="top" id="mFK-nh-lyR"/>
-                                                <constraint firstAttribute="trailing" secondItem="5qU-zr-HrS" secondAttribute="trailing" id="pHE-AY-kd7"/>
-                                                <constraint firstItem="EmX-If-tGp" firstAttribute="leading" secondItem="h0R-p0-nd3" secondAttribute="leading" id="wVs-QI-Pom"/>
+                                                <constraint firstItem="5qU-zr-HrS" firstAttribute="top" secondItem="h0R-p0-nd3" secondAttribute="top" id="0Ed-Gw-HtZ"/>
+                                                <constraint firstItem="EmX-If-tGp" firstAttribute="top" secondItem="h0R-p0-nd3" secondAttribute="topMargin" id="3W2-lW-0dZ"/>
+                                                <constraint firstItem="EmX-If-tGp" firstAttribute="bottom" secondItem="h0R-p0-nd3" secondAttribute="bottomMargin" id="FfS-Yc-weG"/>
+                                                <constraint firstAttribute="bottom" secondItem="5qU-zr-HrS" secondAttribute="bottom" id="Gsr-gt-RbR"/>
+                                                <constraint firstItem="EmX-If-tGp" firstAttribute="leading" secondItem="h0R-p0-nd3" secondAttribute="leadingMargin" id="TPx-8c-42O"/>
+                                                <constraint firstItem="5qU-zr-HrS" firstAttribute="leading" secondItem="EmX-If-tGp" secondAttribute="trailing" constant="15.666666666666686" id="ntq-nt-xcj"/>
+                                                <constraint firstAttribute="trailing" secondItem="5qU-zr-HrS" secondAttribute="trailing" id="rIj-Eh-ihy"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -66,17 +66,20 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Wk2-uB-mqq" secondAttribute="trailing" id="K3I-HO-OCe"/>
-                            <constraint firstItem="Wk2-uB-mqq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Tfp-2E-lt1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Wk2-uB-mqq" secondAttribute="bottom" id="WTn-W6-RnC"/>
-                            <constraint firstItem="Wk2-uB-mqq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yTf-Ds-UfC"/>
+                            <constraint firstItem="Wk2-uB-mqq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="La7-kd-UMg"/>
+                            <constraint firstItem="Wk2-uB-mqq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UBt-x4-BJL"/>
+                            <constraint firstItem="Wk2-uB-mqq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZRb-aI-Yu4"/>
+                            <constraint firstItem="Wk2-uB-mqq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gWK-bA-DY5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ToDo" id="Yke-ku-fyU"/>
+                    <connections>
+                        <outlet property="tasksTableView" destination="Wk2-uB-mqq" id="r15-83-1WK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1039.1304347826087" y="107.8125"/>
+            <point key="canvasLocation" x="1038.4615384615383" y="107.34597156398104"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4qz-ZL-vHc">
