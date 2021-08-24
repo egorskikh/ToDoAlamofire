@@ -22,10 +22,17 @@ class ToDoTableViewCell: UITableViewCell {
         taskLabel.text = todo.item
 
         switch todo.priority {
-        case 0: priorityСolor.backgroundColor = .green
-        case 1: priorityСolor.backgroundColor = .yellow
-        case 2: priorityСolor.backgroundColor = .red
-        default: priorityСolor.backgroundColor = .white
-        }
+        case 0:
+            priorityСolor.backgroundColor = .green
+            prioritySymbolLabel.text = "!"
+        case 1:
+            priorityСolor.backgroundColor = .yellow
+            prioritySymbolLabel.text = "!!"
+        case 2:
+            priorityСolor.backgroundColor = .red
+            prioritySymbolLabel.text = "!!!"
+        default:
+            priorityСolor.backgroundColor = .white
+            prioritySymbolLabel.text = "?"
     }
 }
