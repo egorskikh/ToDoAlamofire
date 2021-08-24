@@ -19,6 +19,7 @@
 		14E6461226D4E244008F8111 /* ToDoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6461126D4E244008F8111 /* ToDoPresenter.swift */; };
 		14E6461426D4E289008F8111 /* ToDoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6461326D4E289008F8111 /* ToDoRouter.swift */; };
 		14E6461C26D4E91A008F8111 /* ToDoContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6461B26D4E91A008F8111 /* ToDoContracts.swift */; };
+		14E6462026D513AF008F8111 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6461F26D513AF008F8111 /* ToDo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		14E6461126D4E244008F8111 /* ToDoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoPresenter.swift; sourceTree = "<group>"; };
 		14E6461326D4E289008F8111 /* ToDoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoRouter.swift; sourceTree = "<group>"; };
 		14E6461B26D4E91A008F8111 /* ToDoContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoContracts.swift; sourceTree = "<group>"; };
+		14E6461F26D513AF008F8111 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 		14E6460B26D3CB3C008F8111 /* ToDoModule */ = {
 			isa = PBXGroup;
 			children = (
+				14E6461E26D51353008F8111 /* Entity */,
 				14E6461A26D4E61D008F8111 /* Contracts */,
 				14E6461926D4E607008F8111 /* Service */,
 				14E6461826D4E5F4008F8111 /* Router */,
@@ -171,6 +174,14 @@
 				14E6461B26D4E91A008F8111 /* ToDoContracts.swift */,
 			);
 			path = Contracts;
+			sourceTree = "<group>";
+		};
+		14E6461E26D51353008F8111 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				14E6461F26D513AF008F8111 /* ToDo.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14E6461C26D4E91A008F8111 /* ToDoContracts.swift in Sources */,
+				14E6462026D513AF008F8111 /* ToDo.swift in Sources */,
 				14E6460E26D4E20A008F8111 /* ToDoNetworking.swift in Sources */,
 				14D40BAC26D2D518008C6047 /* ToDoViewController.swift in Sources */,
 				14E6461426D4E289008F8111 /* ToDoRouter.swift in Sources */,
