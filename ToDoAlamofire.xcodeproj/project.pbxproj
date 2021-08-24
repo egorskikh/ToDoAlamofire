@@ -113,7 +113,7 @@
 		14E6460B26D3CB3C008F8111 /* ToDoModule */ = {
 			isa = PBXGroup;
 			children = (
-				14E6461A26D4E61D008F8111 /* Contract */,
+				14E6461A26D4E61D008F8111 /* Contracts */,
 				14E6461926D4E607008F8111 /* Service */,
 				14E6461826D4E5F4008F8111 /* Router */,
 				14E6461726D4E451008F8111 /* Interactor */,
@@ -165,12 +165,12 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
-		14E6461A26D4E61D008F8111 /* Contract */ = {
+		14E6461A26D4E61D008F8111 /* Contracts */ = {
 			isa = PBXGroup;
 			children = (
 				14E6461B26D4E91A008F8111 /* ToDoContracts.swift */,
 			);
-			path = Contract;
+			path = Contracts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
