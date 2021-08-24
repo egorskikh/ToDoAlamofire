@@ -14,6 +14,11 @@
 		14D40BB126D2D523008C6047 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14D40BB026D2D523008C6047 /* Assets.xcassets */; };
 		14D40BB426D2D523008C6047 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14D40BB226D2D523008C6047 /* LaunchScreen.storyboard */; };
 		14D46D2526D392C7001B7D8B /* ToDoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14D46D2426D392C7001B7D8B /* ToDoTableViewCell.swift */; };
+		14E6460E26D4E20A008F8111 /* ToDoNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6460D26D4E20A008F8111 /* ToDoNetworking.swift */; };
+		14E6461026D4E228008F8111 /* ToDoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6460F26D4E228008F8111 /* ToDoInteractor.swift */; };
+		14E6461226D4E244008F8111 /* ToDoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6461126D4E244008F8111 /* ToDoPresenter.swift */; };
+		14E6461426D4E289008F8111 /* ToDoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6461326D4E289008F8111 /* ToDoRouter.swift */; };
+		14E6461C26D4E91A008F8111 /* ToDoContracts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E6461B26D4E91A008F8111 /* ToDoContracts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		14D40BB326D2D523008C6047 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		14D40BB526D2D523008C6047 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14D46D2426D392C7001B7D8B /* ToDoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewCell.swift; sourceTree = "<group>"; };
+		14E6460D26D4E20A008F8111 /* ToDoNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoNetworking.swift; sourceTree = "<group>"; };
+		14E6460F26D4E228008F8111 /* ToDoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoInteractor.swift; sourceTree = "<group>"; };
+		14E6461126D4E244008F8111 /* ToDoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoPresenter.swift; sourceTree = "<group>"; };
+		14E6461326D4E289008F8111 /* ToDoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoRouter.swift; sourceTree = "<group>"; };
+		14E6461B26D4E91A008F8111 /* ToDoContracts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoContracts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,11 +113,64 @@
 		14E6460B26D3CB3C008F8111 /* ToDoModule */ = {
 			isa = PBXGroup;
 			children = (
-				14D40BAB26D2D518008C6047 /* ToDoViewController.swift */,
-				14D46D2426D392C7001B7D8B /* ToDoTableViewCell.swift */,
-				14D40BAD26D2D518008C6047 /* Main.storyboard */,
+				14E6461A26D4E61D008F8111 /* Contract */,
+				14E6461926D4E607008F8111 /* Service */,
+				14E6461826D4E5F4008F8111 /* Router */,
+				14E6461726D4E451008F8111 /* Interactor */,
+				14E6461626D4E441008F8111 /* Presenter */,
+				14E6461526D4E42E008F8111 /* View */,
 			);
 			path = ToDoModule;
+			sourceTree = "<group>";
+		};
+		14E6461526D4E42E008F8111 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14D40BAD26D2D518008C6047 /* Main.storyboard */,
+				14D46D2426D392C7001B7D8B /* ToDoTableViewCell.swift */,
+				14D40BAB26D2D518008C6047 /* ToDoViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		14E6461626D4E441008F8111 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				14E6461126D4E244008F8111 /* ToDoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		14E6461726D4E451008F8111 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				14E6460F26D4E228008F8111 /* ToDoInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		14E6461826D4E5F4008F8111 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				14E6461326D4E289008F8111 /* ToDoRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		14E6461926D4E607008F8111 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				14E6460D26D4E20A008F8111 /* ToDoNetworking.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		14E6461A26D4E61D008F8111 /* Contract */ = {
+			isa = PBXGroup;
+			children = (
+				14E6461B26D4E91A008F8111 /* ToDoContracts.swift */,
+			);
+			path = Contract;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +243,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14E6461C26D4E91A008F8111 /* ToDoContracts.swift in Sources */,
+				14E6460E26D4E20A008F8111 /* ToDoNetworking.swift in Sources */,
 				14D40BAC26D2D518008C6047 /* ToDoViewController.swift in Sources */,
+				14E6461426D4E289008F8111 /* ToDoRouter.swift in Sources */,
 				14D40BA826D2D518008C6047 /* AppDelegate.swift in Sources */,
 				14D40BAA26D2D518008C6047 /* SceneDelegate.swift in Sources */,
+				14E6461026D4E228008F8111 /* ToDoInteractor.swift in Sources */,
+				14E6461226D4E244008F8111 /* ToDoPresenter.swift in Sources */,
 				14D46D2526D392C7001B7D8B /* ToDoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
