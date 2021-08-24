@@ -61,7 +61,7 @@ playground.xcworkspace
 Pods/
 Podfile
 Podfile.lock
-*.xcworkspace
+ToDoAlamofire.xcworkspace
 
 # Carthage
 #
