@@ -35,8 +35,18 @@
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qU-zr-HrS">
                                                     <rect key="frame" x="314.66666666666669" y="0.0" width="75.333333333333314" height="109"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbk-fO-ZJP">
+                                                            <rect key="frame" x="29.333333333333314" y="44" width="17" height="21"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
                                                     <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                     <constraints>
+                                                        <constraint firstItem="xbk-fO-ZJP" firstAttribute="centerY" secondItem="5qU-zr-HrS" secondAttribute="centerY" id="071-8P-et8"/>
+                                                        <constraint firstItem="xbk-fO-ZJP" firstAttribute="centerX" secondItem="5qU-zr-HrS" secondAttribute="centerX" id="PQc-em-OoR"/>
                                                         <constraint firstAttribute="width" constant="75.333333333333314" id="xCR-lt-eSl"/>
                                                     </constraints>
                                                 </view>
@@ -52,6 +62,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="prioritySymbolLabel" destination="xbk-fO-ZJP" id="rd3-NO-Fib"/>
                                             <outlet property="priorityСolor" destination="5qU-zr-HrS" id="oEL-AU-ljd"/>
                                             <outlet property="taskLabel" destination="EmX-If-tGp" id="lMg-tO-9k2"/>
                                         </connections>

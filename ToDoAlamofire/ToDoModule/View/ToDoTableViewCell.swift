@@ -15,5 +15,6 @@ class ToDoTableViewCell: UITableViewCell {
     // MARK: - IBOutlet
     @IBOutlet weak var taskLabel: UILabel!
     @IBOutlet weak var priorityСolor: UIView!
-
+    @IBOutlet weak var prioritySymbolLabel: UILabel!
+    
 }
