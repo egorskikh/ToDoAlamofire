@@ -10,6 +10,14 @@ import Alamofire
 
 class ToDoViewController: UIViewController {
 
+    // MARK: - Properties
+    var todos: [ToDo] = [
+        .init(item: "Foo", priority: 0),
+        .init(item: "Taz", priority: 1),
+        .init(item: "Baz", priority: 2),
+        .init(item: "Lol", priority: 5),
+    ]
+
     // MARK: - IBOutlet
     @IBOutlet weak var tasksTableView: UITableView!
 
@@ -41,13 +49,14 @@ class ToDoViewController: UIViewController {
 extension ToDoViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 30
+        return todos.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tasksTableView.dequeueReusableCell(withIdentifier: ToDoTableViewCell.identifier, for: indexPath)
             as! ToDoTableViewCell
-        cell.backgroundColor = #colorLiteral(red: 0.9098039269, green: 0.7249955512, blue: 0.7472946008, alpha: 1)
+        let task = todos[indexPath.item]
+        cell.configureCell(todo: task)
         return cell
     }
 
