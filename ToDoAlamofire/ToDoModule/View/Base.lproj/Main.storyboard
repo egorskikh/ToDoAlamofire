@@ -51,6 +51,10 @@
                                                 <constraint firstItem="EmX-If-tGp" firstAttribute="leading" secondItem="h0R-p0-nd3" secondAttribute="leading" id="wVs-QI-Pom"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="priorityСolor" destination="5qU-zr-HrS" id="oEL-AU-ljd"/>
+                                            <outlet property="taskLabel" destination="EmX-If-tGp" id="lMg-tO-9k2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
