@@ -16,5 +16,16 @@ class ToDoTableViewCell: UITableViewCell {
     @IBOutlet weak var taskLabel: UILabel!
     @IBOutlet weak var priorityСolor: UIView!
     @IBOutlet weak var prioritySymbolLabel: UILabel!
-    
+
+    //MARK: - Public Method
+    public func configureCell(todo: ToDo) {
+        taskLabel.text = todo.item
+
+        switch todo.priority {
+        case 0: priorityСolor.backgroundColor = .green
+        case 1: priorityСolor.backgroundColor = .yellow
+        case 2: priorityСolor.backgroundColor = .red
+        default: priorityСolor.backgroundColor = .white
+        }
+    }
 }
