@@ -11,7 +11,7 @@ struct ToDos: Codable {
     let items: [Todo] 
 }
 
-struct Todo: Codable {
+struct ToDo: Codable {
     let item: String
     let priority: Int
 }
