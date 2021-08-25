@@ -5,40 +5,41 @@
 //  Created by Egor Gorskikh on 24.08.2021.
 //
 
-import Foundation
+import UIKit
 
 // MARK: - View
 
-protocol ViewInput {
-
-}
-
-protocol ViewOutput {
-
-}
-
-// MARK: - Interactor
-
-protocol InteractorInput {
-
-}
-
-protocol InteractorOutput {
-
+protocol ViewProtocol: AnyObject {
+    var presenter: PresenterProtocol? { get set }
+    func showTodos(_ todos: [ToDo])
 }
 
 // MARK: - Presenter
 
-protocol PresenterInput {
+protocol PresenterProtocol {
+    var view: ViewProtocol? { get set } // weak
+    var interactor: InteractorInputProtocol? { get set }
+    var router: RouterProtocol? { get set }
 
+    func viewWillAppear()
 }
 
-protocol PresenterOutput {
+// MARK: - Interactor
 
+protocol InteractorOutputProtocol: AnyObject {
+    func didRetrieveToDos(_ todos: [ToDo])
 }
+
+protocol InteractorInputProtocol: AnyObject {
+    var presenter: InteractorOutputProtocol? { get set } // weak
+
+    func retrieveTodos()
+}
+
+
 
 // MARK: - Router
 
-protocol RouterInput {
-
+protocol RouterProtocol {
+    static func createToDoModule() -> UIViewController
 }

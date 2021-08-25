@@ -5,6 +5,21 @@
 //  Created by Egor Gorskikh on 24.08.2021.
 //
 
-import Foundation
+import UIKit
+
+class ToDoInteractor: InteractorInputProtocol {
+
+    weak var presenter: InteractorOutputProtocol?
+    var service = ToDoNetworking()
+
+    var todos: [ToDo] {
+        service.getDataTest
+    }
+
+    func retrieveTodos() {
+        presenter?.didRetrieveToDos(todos)
+    }
+
+}
 
 

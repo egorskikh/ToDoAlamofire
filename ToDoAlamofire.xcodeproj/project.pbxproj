@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -205,7 +205,6 @@
 				C4223339CCE3C9E34BEC3782 /* Pods-ToDoAlamofire.debug.xcconfig */,
 				4C866535775011D85904EC63 /* Pods-ToDoAlamofire.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
