@@ -16,7 +16,7 @@ class ToDoInteractor: InteractorInputProtocol {
         service.getDataTest
     }
 
-    func retrieveTodos() {
+    func retrieveTodosForPresenter() {
         presenter?.didRetrieveToDos(todos)
     }
 

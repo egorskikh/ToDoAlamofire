@@ -14,12 +14,16 @@ class ToDoRouter: RouterProtocol {
     }
 
     static func createToDoModule() -> UIViewController {
-        let navController = storyboard.instantiateViewController(withIdentifier: "ToDoNavigation") as! UINavigationController
+
+        let navController = storyboard
+            .instantiateViewController(withIdentifier: "ToDoNavigation") as! UINavigationController
+
         guard
             let toDoViewController = navController.topViewController as? ToDoViewController
         else {
             fatalError("Invalid View Controller")
         }
+
         var presenter: PresenterProtocol & InteractorOutputProtocol = ToDoPresenter()
         let interactor: InteractorInputProtocol = ToDoInteractor()
         let router = ToDoRouter()

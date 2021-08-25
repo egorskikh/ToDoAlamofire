@@ -21,7 +21,7 @@ protocol PresenterProtocol {
     var interactor: InteractorInputProtocol? { get set }
     var router: RouterProtocol? { get set }
 
-    func viewWillAppear()
+    func retrieveTodosForView()
 }
 
 // MARK: - Interactor
@@ -33,7 +33,7 @@ protocol InteractorOutputProtocol: AnyObject {
 protocol InteractorInputProtocol: AnyObject {
     var presenter: InteractorOutputProtocol? { get set } // weak
 
-    func retrieveTodos()
+    func retrieveTodosForPresenter()
 }
 
 

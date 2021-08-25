@@ -13,8 +13,8 @@ class ToDoPresenter: PresenterProtocol {
     var interactor: InteractorInputProtocol?
     var router: RouterProtocol?
 
-    func viewWillAppear() {
-        interactor?.retrieveTodos()
+    func retrieveTodosForView() {
+        interactor?.retrieveTodosForPresenter()
     }
     
 }
