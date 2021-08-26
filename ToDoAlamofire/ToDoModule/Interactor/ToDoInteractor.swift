@@ -13,8 +13,9 @@ class ToDoInteractor: InteractorInputProtocol {
     var service = ToDoNetworking()
 
     var todos: [ToDo] {
-        service.getDataTest
+        service.getData
     }
+
 
     func retrieveTodosForPresenter() {
         presenter?.didRetrieveToDos(todos)

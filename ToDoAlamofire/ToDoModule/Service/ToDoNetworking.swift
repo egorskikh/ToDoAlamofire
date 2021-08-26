@@ -6,14 +6,32 @@
 //
 
 import Foundation
+import Alamofire
 
 class ToDoNetworking {
 
-    var getDataTest: [ToDo] = [
-        .init(item: "Baz", priority: 2),
-        .init(item: "Lol", priority: 5),
-        .init(item: "Foo", priority: 0),
-        .init(item: "Taz", priority: 1)
-    ]
+    var getData: [ToDo] {
+        [ToDo(item: "Foo", priority: 2)]
+    }
+
+    func getRequest(completion: @escaping ([ToDo]?) -> () ) {
+
+        let request = Session.default.request("http://localhost:3003/")
+
+        request.responseDecodable(of: ToDos.self) { (response) in
+
+            switch response.result {
+            case .success(let tasks):
+                print("SUCCESS to FETCH JSON: \(tasks)")
+                completion(tasks.items)
+            case .failure(let error):
+                print("FAILED to FETCH JSON: \(error.localizedDescription)")
+                completion(nil)
+            }
+
+        }
+
+    }
+
     
 }
