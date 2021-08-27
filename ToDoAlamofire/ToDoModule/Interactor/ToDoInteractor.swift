@@ -11,14 +11,14 @@ class ToDoInteractor: InteractorInputProtocol {
 
     weak var presenter: InteractorOutputProtocol?
     var service = ToDoNetworking()
-
-    var todos: [ToDo] {
-        service.getData
-    }
-
+    var todos: [ToDo] = []
 
     func retrieveTodosForPresenter() {
-        presenter?.didRetrieveToDos(todos)
+        service.getData({ todos in
+            print("PROCESS")
+            self.todos = todos
+            self.presenter?.didRetrieveToDos(todos)
+        })
     }
 
 }

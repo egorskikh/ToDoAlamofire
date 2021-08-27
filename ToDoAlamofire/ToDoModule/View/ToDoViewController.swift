@@ -32,6 +32,10 @@ class ToDoViewController: UIViewController, ViewProtocol {
         super.viewWillAppear(animated)
         presenter?.retrieveTodosForView()
     }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+    }
     
     //  MARK: - Private Method
     func showTodos(_ todos: [ToDo]) {
