@@ -75,7 +75,7 @@ extension ToDoViewController: UITableViewDataSource {
 extension ToDoViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 109
+        return 70
     }
     
 }
