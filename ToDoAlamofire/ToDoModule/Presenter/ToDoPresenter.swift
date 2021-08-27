@@ -11,7 +11,7 @@ class ToDoPresenter: PresenterProtocol {
 
     weak var view: ViewProtocol?
     var interactor: InteractorInputProtocol?
-    var router: RouterProtocol?
+    var router: ConfiguratorProtocol?
 
     func retrieveTodosForView() {
         interactor?.retrieveTodosForPresenter()

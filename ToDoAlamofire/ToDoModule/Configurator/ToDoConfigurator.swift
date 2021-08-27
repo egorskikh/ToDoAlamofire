@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ToDoConfigurator: RouterProtocol {
+class ToDoConfigurator: ConfiguratorProtocol {
 
     func buildModule(vc: ViewProtocol) {
         var presenter: PresenterProtocol & InteractorOutputProtocol = ToDoPresenter()

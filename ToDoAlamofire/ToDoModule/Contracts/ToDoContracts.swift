@@ -19,7 +19,7 @@ protocol ViewProtocol: AnyObject {
 protocol PresenterProtocol {
     var view: ViewProtocol? { get set } // weak
     var interactor: InteractorInputProtocol? { get set }
-    var router: RouterProtocol? { get set }
+    var router: ConfiguratorProtocol? { get set }
 
     func retrieveTodosForView()
 }
@@ -38,8 +38,8 @@ protocol InteractorInputProtocol: AnyObject {
 
 
 
-// MARK: - Router
+// MARK: - Configurator
 
-protocol RouterProtocol {
+protocol ConfiguratorProtocol {
      func buildModule(vc: ViewProtocol)
 }
