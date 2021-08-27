@@ -11,15 +11,7 @@ import Alamofire
 class ToDoNetworking {
     typealias DataCompletionHandler = ([ToDo]) -> Void
 
-        func getData(_ completionHandler: @escaping DataCompletionHandler ) {
-            print("START")
-            getRequest { result in
-                completionHandler(result)
-            }
-            print("END")
-        }
-
-    func getRequest(completionHandler: @escaping DataCompletionHandler ) {
+    func getResponse(completionHandler: @escaping DataCompletionHandler ) {
         var returnArr: [ToDo] = []
         let request = Session.default.request("http://localhost:3003/")
 

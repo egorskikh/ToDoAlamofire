@@ -10,9 +10,10 @@ import UIKit
 class ToDoViewController: UIViewController, ViewProtocol {
     
     // MARK: - Properties
+    var configuration = ToDoConfigurator()
     var presenter: PresenterProtocol?
     
-    var todos: [ToDo] = [ ] {
+    var todos: [ToDo] = [] {
         didSet {
             tasksTableView.reloadData()
         }
@@ -26,6 +27,7 @@ class ToDoViewController: UIViewController, ViewProtocol {
         super.viewDidLoad()
         configureView()
         configureNavigationController()
+        configuration.buildModule(vc: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,7 +65,7 @@ extension ToDoViewController: UITableViewDataSource {
         let cell = tasksTableView.dequeueReusableCell(withIdentifier: ToDoTableViewCell.identifier, for: indexPath)
             as! ToDoTableViewCell
         let task = todos[indexPath.item]
-        cell.configureCell(todo: task)
+        cell.fillСell(todo: task)
         return cell
     }
     

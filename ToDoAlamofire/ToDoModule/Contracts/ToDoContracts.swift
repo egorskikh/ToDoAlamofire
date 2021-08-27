@@ -41,5 +41,5 @@ protocol InteractorInputProtocol: AnyObject {
 // MARK: - Router
 
 protocol RouterProtocol {
-    static func createToDoModule() -> UIViewController
+     func buildModule(vc: ViewProtocol)
 }

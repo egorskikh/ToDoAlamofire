@@ -18,7 +18,7 @@ class ToDoTableViewCell: UITableViewCell {
     @IBOutlet weak var prioritySymbolLabel: UILabel!
 
     //MARK: - Public Method
-    public func configureCell(todo: ToDo) {
+    public func fillСell(todo: ToDo) {
         taskLabel.text = todo.item
         switch todo.priority {
         case 0:

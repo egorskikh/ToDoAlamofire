@@ -14,11 +14,10 @@ class ToDoInteractor: InteractorInputProtocol {
     var todos: [ToDo] = []
 
     func retrieveTodosForPresenter() {
-        service.getData({ todos in
-            print("PROCESS")
+        service.getResponse { todos in
             self.todos = todos
             self.presenter?.didRetrieveToDos(todos)
-        })
+        }
     }
 
 }
