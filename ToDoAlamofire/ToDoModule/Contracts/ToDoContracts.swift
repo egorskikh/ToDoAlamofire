@@ -36,8 +36,6 @@ protocol InteractorInputProtocol: AnyObject {
     func retrieveTodosForPresenter()
 }
 
-
-
 // MARK: - Configurator
 
 protocol ConfiguratorProtocol {
