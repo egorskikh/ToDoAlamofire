@@ -11,11 +11,11 @@ import Alamofire
 class ToDoNetworking {
     typealias DataCompletionHandler = ([ToDo]) -> Void
 
-    func getResponse(completionHandler: @escaping DataCompletionHandler ) {
+    // GET
+    func getMethod(completionHandler: @escaping DataCompletionHandler ) {
 
         let request = Session.default.request("http://localhost:3003/")
         request.responseDecodable(of: ToDos.self) { (response) in
-
             switch response.result {
             
             case .success(let tasks):
@@ -24,8 +24,16 @@ class ToDoNetworking {
             case .failure(let error):
                 print("FAILED to FETCH JSON: \(error.localizedDescription)")
             }
-
         }
+    }
+
+    // POST
+    func postMethod() {
+
+    }
+
+    // DELETE
+    func deleteMethod() {
 
     }
 

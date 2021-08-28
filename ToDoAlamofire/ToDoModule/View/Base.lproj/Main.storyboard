@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Wk2-uB-mqq">
-                                <rect key="frame" x="0.0" y="88" width="390" height="722"/>
+                                <rect key="frame" x="0.0" y="198" width="390" height="612"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCell" rowHeight="70" id="opO-TP-g5I" customClass="ToDoTableViewCell" customModule="ToDoAlamofire" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="24.333333969116211" width="390" height="70"/>
@@ -36,7 +36,7 @@
                                                     <rect key="frame" x="314.66666666666669" y="0.0" width="75.333333333333314" height="70"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbk-fO-ZJP">
-                                                            <rect key="frame" x="29.333333333333314" y="24.666666666666671" width="17" height="21"/>
+                                                            <rect key="frame" x="29.333333333333314" y="25" width="17" height="20.333333333333329"/>
                                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -72,11 +72,35 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="4qI-n5-pNY"/>
                                 </connections>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="JM6-Tp-s6x">
+                                <rect key="frame" x="10" y="98" width="370" height="89"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What task to add?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="I5O-Fp-qRU">
+                                        <rect key="frame" x="0.0" y="0.0" width="370" height="38"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="38" id="t1q-h7-LjS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UhF-5X-Kns">
+                                        <rect key="frame" x="0.0" y="49" width="370" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                        <state key="normal" title="Add">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Wk2-uB-mqq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="La7-kd-UMg"/>
+                            <constraint firstItem="JM6-Tp-s6x" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="3jb-m6-yTk"/>
+                            <constraint firstItem="Wk2-uB-mqq" firstAttribute="top" secondItem="JM6-Tp-s6x" secondAttribute="bottom" constant="11" id="Dq3-fg-Ua6"/>
+                            <constraint firstItem="JM6-Tp-s6x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="GHl-MZ-OVi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JM6-Tp-s6x" secondAttribute="trailing" constant="10" id="O1a-Dd-AhV"/>
                             <constraint firstItem="Wk2-uB-mqq" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UBt-x4-BJL"/>
                             <constraint firstItem="Wk2-uB-mqq" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ZRb-aI-Yu4"/>
                             <constraint firstItem="Wk2-uB-mqq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gWK-bA-DY5"/>
@@ -84,6 +108,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="ToDo" id="Yke-ku-fyU"/>
                     <connections>
+                        <outlet property="addButton" destination="UhF-5X-Kns" id="gkO-Gi-WoE"/>
+                        <outlet property="taskTextField" destination="I5O-Fp-qRU" id="Eiw-De-cJh"/>
                         <outlet property="tasksTableView" destination="Wk2-uB-mqq" id="r15-83-1WK"/>
                     </connections>
                 </viewController>
@@ -113,6 +139,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

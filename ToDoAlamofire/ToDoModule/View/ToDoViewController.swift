@@ -20,8 +20,10 @@ class ToDoViewController: UIViewController, ViewProtocol {
     }
     
     // MARK: - IBOutlet
+    @IBOutlet weak var taskTextField: UITextField!
+    @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var tasksTableView: UITableView!
-    
+
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +52,7 @@ class ToDoViewController: UIViewController, ViewProtocol {
     
     private func configureNavigationController() {
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
     }
     
 }

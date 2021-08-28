@@ -14,7 +14,7 @@ class ToDoInteractor: InteractorInputProtocol {
     var todos: [ToDo] = []
 
     func retrieveTodosForPresenter() {
-        service.getResponse { todos in
+        service.getMethod { todos in
             self.todos = todos
             self.presenter?.didRetrieveToDos(todos)
         }
